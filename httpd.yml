@@ -1,0 +1,15 @@
+---
+- name: this is for an install of httpd
+  hosts: dev
+  become: yes
+  gather_facts: yes
+  tasks:
+    - name: install httpd
+      ansible.builtin.yum:
+        name: httpd
+        state: latest
+    - name: start httpd
+      ansible.builtin.yum:
+        name: httpd
+        state: started
+         
