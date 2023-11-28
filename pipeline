@@ -11,6 +11,7 @@ pipeline {
         stage('Run Ansible') {
             steps {
                 script {
+                       sh 'su - ansible' 
                        sh '/var/lib/jenkins/workspace/${JOB_NAME}/ansible-playbook httpd.yml'
                 }
             }
