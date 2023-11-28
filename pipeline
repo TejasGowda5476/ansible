@@ -11,7 +11,7 @@ pipeline {
         stage('Run Ansible') {
             steps {
                 script {
-                    sh 'sudo -u ansible -s ansible-playbook /var/lib/jenkins/workspace/pipeline/httpd.yml'
+                    sh 'sudo -u ansible -s ansible-playbook /var/lib/jenkins/workspace/${JOB_NAME}/httpd.yml'
                 }
             }
         }
