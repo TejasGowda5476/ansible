@@ -12,6 +12,7 @@ pipeline {
             steps {
                 script {
                        sh '/var/lib/jenkins/workspace/${JOB_NAME}/'
+                       sh 'sudo -u ansible ansible-playbook httpd.yml'
                 }
             }
         }
