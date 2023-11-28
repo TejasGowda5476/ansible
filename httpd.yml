@@ -2,6 +2,7 @@
 - name: this is for an install of httpd
   hosts: dev
   become: yes
+  become_user: ansible
   gather_facts: yes
   tasks:
     - name: install httpd
